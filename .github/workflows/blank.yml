@@ -22,12 +22,14 @@ jobs:
           ls
           git fetch
           git checkout gh-pages
+          mkdir gh-pages
+          cd gh-pages
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
           <html> 
           <body>
-          <h1>My Latest Heading</h1>
+          <h1>My Latest Heading served from folder</h1>
           <p>My latest paragraph.</p>
           </body>
           </html>
