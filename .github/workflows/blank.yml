@@ -23,7 +23,7 @@ jobs:
           ls
           git fetch
           git checkout gh-pages
-          mkdir -p gh-pages-dir
+          mkdir -p staging/gh-pages-dir
           cd gh-pages-dir
           touch index.html
           cat << EOF > index.html
@@ -57,5 +57,5 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: gh-pages-dir
+          publish_dir: staging
           publish_branch: gh-pages
