@@ -26,6 +26,9 @@ jobs:
           mkdir -p allure-reports/bm01
           cd allure-reports/bm01
           mkdir hello
+          cd hello 
+          touch test.txt
+          cd ..
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
