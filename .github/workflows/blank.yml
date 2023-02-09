@@ -30,7 +30,7 @@ jobs:
           <!DOCTYPE html>
           <html> 
           <body>
-          <h1>My Latest Heading served from dir gh-pages-dir</h1>
+          <h1>My Latest changes served from dir gh-pages-dir v2</h1>
           <p>My latest paragraph.</p>
           </body>
           </html>
