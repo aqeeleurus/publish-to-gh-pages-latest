@@ -21,8 +21,8 @@ jobs:
         run: |
           pwd
           ls
-          # git fetch
-          # git checkout gh-pages
+          git fetch
+          git checkout gh-pages
           # mkdir -p gh-pages-dir
           # cd gh-pages-dir
           touch index.html
