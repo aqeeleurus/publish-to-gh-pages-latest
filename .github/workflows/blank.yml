@@ -36,12 +36,12 @@ jobs:
           </html>
           EOF
           # cd gh-pages
-          git fetch
+          # git fetch
           
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -a -m "Add changes" || true
+          # git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          # git config --local user.name "github-actions[bot]"
+          # git add .
+          # git commit -a -m "Add changes" || true
       
       - name: Push changes
         if: ${{ always() }}
@@ -49,12 +49,13 @@ jobs:
         with:
           branch: gh-pages
           
-#       - name: Deploy
-#         uses: peaceiris/actions-gh-pages@v3
-#         # If you're changing the branch from main,
-#         # also change the `main` in `refs/heads/main`
-#         # below accordingly.
-# #         if: ${{ github.ref == 'refs/heads/main' }}
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           publish_dir: ./public
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        # If you're changing the branch from main,
+        # also change the `main` in `refs/heads/main`
+        # below accordingly.
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gh-pages-dir
+          publish_branch: gh-pages
