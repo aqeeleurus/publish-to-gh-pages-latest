@@ -21,10 +21,10 @@ jobs:
         run: |
           pwd
           ls
-          git fetch
-          git checkout gh-pages
-          mkdir -p gh-pages-dir
-          cd gh-pages-dir
+          # git fetch
+          # git checkout gh-pages
+          # mkdir -p gh-pages-dir
+          # cd gh-pages-dir
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
