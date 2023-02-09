@@ -23,7 +23,7 @@ jobs:
           ls
           git fetch
           git checkout gh-pages
-          #mkdir gh-pages-dir
+          mkdir -p gh-pages-dir
           cd gh-pages-dir
           touch index.html
           cat << EOF > index.html
