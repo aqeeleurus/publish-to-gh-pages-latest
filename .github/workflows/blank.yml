@@ -25,6 +25,7 @@ jobs:
           git checkout gh-pages
           mkdir -p allure-reports/bm01
           cd allure-reports/bm01
+          mkdir hello
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
