@@ -23,8 +23,8 @@ jobs:
           ls
           git fetch
           git checkout gh-pages
-          mkdir -p staging/gh-pages-dir
-          cd staging/gh-pages-dir
+          mkdir -p allure-reports/bm01
+          cd allure-reports/bm01
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
@@ -57,5 +57,5 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: staging
+          publish_dir: allure-reports
           publish_branch: gh-pages
