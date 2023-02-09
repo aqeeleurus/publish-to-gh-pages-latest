@@ -30,7 +30,7 @@ jobs:
           <!DOCTYPE html>
           <html> 
           <body>
-          <h1>My Latest changes served from root</h1>
+          <h1>My Latest changes served from root dir</h1>
           <p>My latest paragraph.</p>
           </body>
           </html>
@@ -43,11 +43,11 @@ jobs:
           # git add .
           # git commit -a -m "Add changes" || true
       
-      - name: Push changes
-        if: ${{ always() }}
-        uses: ad-m/github-push-action@master
-        with:
-          branch: gh-pages
+      # - name: Push changes
+      #   if: ${{ always() }}
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     branch: gh-pages
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
