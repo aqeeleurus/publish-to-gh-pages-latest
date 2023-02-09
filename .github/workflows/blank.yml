@@ -24,7 +24,7 @@ jobs:
           git fetch
           git checkout gh-pages
           mkdir -p staging/gh-pages-dir
-          cd gh-pages-dir
+          cd staging/gh-pages-dir
           touch index.html
           cat << EOF > index.html
           <!DOCTYPE html>
